@@ -5,7 +5,12 @@
 
 
   tasks:
-    - name: wait_for_folder_to_be_created
-      wait_for:
-        path: "/home/brajcic/WaitFolder"
+    - name: Queue build of a project in Jenkins
+      uri:
+        url: "http://localhost:8080/job/ansible-calls-jenkins//build?token=ansible_token"
+        method: POST
+        user: "{{ jenkins.user }}"
+        password: "{{ jenkins.password }}"
+        force_basic_auth: yes
+        status_code: 201
 
