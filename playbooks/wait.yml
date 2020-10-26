@@ -9,8 +9,8 @@
       uri:
         url: "http://localhost:8080/job/ansible-calls-jenkins//build?token=ansible_token"
         method: POST
-        user: "{{ jenkins.user }}"
-        password: "{{ jenkins.password }}"
+        user: "brajcicansible"
+        password: "bojan123"
         force_basic_auth: yes
         status_code: 201
 
