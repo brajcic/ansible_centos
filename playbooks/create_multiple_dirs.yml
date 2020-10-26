@@ -22,5 +22,7 @@
       file:
         path: "/home/brajcic/{{ folder_name }}/{{ file_name }}"
         state: touch
-        content:
-          "This is the first line"
+        content: |
+          This is the first line
+          And this is the second line
+          Probably third
