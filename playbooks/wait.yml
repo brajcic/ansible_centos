@@ -9,8 +9,11 @@
       uri:
         url: "http://localhost:8080/job/ansible-job-second//build?token=11b4f83aec94f4f1cb599431434a77a364"
         force_basic_auth: yes
+        user: "brajcicansible"
+        password: "bojan123"
         method: POST
         status_code: 201
         headers:
-          Jenkins-Crumb: "9ef6b8b9513cee8e6a5696cee164d9f1c2f745c75471323d32395d3289890b6c3a235e5830cc7b35d9debd5a139bcc0556ae111be1a738696f01734c2c352dd4"
+          Jenkins-Crumb: "80630d71cd5d998e25c5f62ba576f16acf1c593fdab5733fc5f1b38b8422ae29
+
 
