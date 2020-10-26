@@ -3,11 +3,11 @@
 - hosts: server1
   become: yes
 
-  vars_prompt:
-    - name: folder_name
-      prompt: "Please enter folder_name: "
-      private: no
-      register: folder_name
+#  vars_prompt:
+#    - name: folder_name
+#      prompt: "Please enter folder_name: "
+#      private: no
+#      register: folder_name
 
 
   tasks:
