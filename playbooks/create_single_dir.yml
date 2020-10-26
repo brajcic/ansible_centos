@@ -1,0 +1,10 @@
+---
+
+- hosts: server1
+  become: yes
+
+  tasks:
+    - name: create_folder
+      file:
+        path: "/home/brajcic/WaitFolder"
+        state: directory

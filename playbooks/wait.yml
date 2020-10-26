@@ -1,0 +1,11 @@
+---
+
+- hosts: server1
+  become: yes
+
+
+  tasks:
+    - name: wait_for_folder_to_be_created
+      wait_for:
+        path: "/home/brajcic/WaitFolder"
+
