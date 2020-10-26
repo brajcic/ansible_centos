@@ -4,11 +4,9 @@
   become: yes
 
   handlers:
-    - name: delete_folder
-      file:
-        path: "/home/brajcic/Test"
-        state: absent
-
+    - name: print
+      debug:
+        msg: "{{ ansible_facts }}"
 
 
 
@@ -21,4 +19,4 @@
         - dir1
         - dir2
         - dir3
-      notify: delete_folder
+      notify: print
