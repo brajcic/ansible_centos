@@ -26,7 +26,7 @@
   tasks:
     - name: edit_file
       lineinfile:
-        dest: "home/brajcic/{{ folder_name }}/{{ file_name }}"
+        dest: "/home/brajcic/{{ folder_name }}/{{ file_name }}"
         regex: "third$"
         line: "Probably third:Bojan"
         state: present
