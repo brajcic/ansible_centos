@@ -2,3 +2,6 @@
 
 [server1]
 10.113.80.104
+
+[server1:vars]
+folder_name=Test
