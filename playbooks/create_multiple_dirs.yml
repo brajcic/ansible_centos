@@ -9,14 +9,12 @@
 #      private: no
 #      register: folder_name
 
-
-  tasks:
+  pre_tasks:
     - name: create_directory
       file:
         path: "/home/brajcic/{{ folder_name }}"
         state: directory
 
-  post_tasks:
     - name: create_file
       copy:
         dest: "/home/brajcic/{{ folder_name }}/{{ file_name }}"
@@ -25,3 +23,13 @@
           And this is the second line
           Probably third
 
+  tasks:
+
+
+  post_tasks:
+    - name: edit_file
+      lineinfile:
+        path: "home/brajcic/{{ folder_name }}/{{ file_name }}"
+        regex: "third$"
+        line: "Probably third:Bojan"
+        state: present
