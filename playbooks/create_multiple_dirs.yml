@@ -21,5 +21,4 @@
     - name: create_file
       file:
         path: "/home/brajcic/{{ folder_name }}/{{ file_name }}"
-        state: file
-        mode: '0755'
+        state: touch
