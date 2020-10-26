@@ -9,7 +9,5 @@
       uri:
         url: "http://localhost:8080/job/ansible-calls-jenkins//build?token=ansible_token"
         method: POST
-        user: "brajcicansible"
-        password: "bojan123"
         status_code: 201
 
