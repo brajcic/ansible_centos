@@ -7,8 +7,7 @@
   tasks:
     - name: Queue build of a project in Jenkins
       uri:
-        #url: "http://localhost:8080/job/ansible-calls-jenkins//build?token=11b4f83aec94f4f1cb599431434a77a364"
-        url: "http://localhost:8080/buildByToken/build?job=ansible-job-second&token=11b4f83aec94f4f1cb599431434a77a364"
+        url: "http://localhost:8080/job/ansible-job-second//build?token=11b4f83aec94f4f1cb599431434a77a364"
         method: POST
         status_code: 201
 
