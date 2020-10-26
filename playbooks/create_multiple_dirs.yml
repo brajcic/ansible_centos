@@ -15,7 +15,6 @@
       file:
         path: "/home/brajcic/{{ folder_name }}"
         state: directory
-        mode: '0755'
 
   post_tasks:
     - name: create_file
