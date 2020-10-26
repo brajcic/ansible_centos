@@ -24,12 +24,11 @@
           Probably third
 
   tasks:
-
-
-  post_tasks:
     - name: edit_file
       lineinfile:
         path: "home/brajcic/{{ folder_name }}/{{ file_name }}"
         regex: "third$"
         line: "Probably third:Bojan"
         state: present
+
+
