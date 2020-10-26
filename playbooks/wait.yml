@@ -1,7 +1,7 @@
 ---
 
-- hosts: server1
-  become: yes
+- hosts: localhost
+  connection: local
 
 
   tasks:
@@ -11,6 +11,5 @@
         method: POST
         user: "brajcicansible"
         password: "bojan123"
-        force_basic_auth: yes
         status_code: 201
 
