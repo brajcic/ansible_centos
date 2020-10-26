@@ -18,10 +18,10 @@
 
   post_tasks:
     - name: create_file
-      file:
-        path: "/home/brajcic/{{ folder_name }}/{{ file_name }}"
-        state: touch
+      copy:
+        dest: "/home/brajcic/{{ folder_name }}/{{ file_name }}"
         content: |
           This is the first line
           And this is the second line
           Probably third
+
