@@ -5,4 +5,4 @@
 
 [server1:vars]
 folder_name=Test
-file_name=tekst.txt
+file_name=tekst
