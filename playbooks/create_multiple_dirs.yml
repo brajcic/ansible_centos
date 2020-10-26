@@ -22,3 +22,5 @@
       file:
         path: "/home/brajcic/{{ folder_name }}/{{ file_name }}"
         state: touch
+        content:
+          "This is the first line"
