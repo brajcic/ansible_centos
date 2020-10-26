@@ -1,0 +1,16 @@
+---
+
+- hosts: server1
+  become: yes
+
+  vars_prompt:
+    - name: folder_name
+      prompt: "Please enter folder_name: "
+      private: no
+      register: folder_name
+
+
+  tasks:
+    - name: create_directory
+      file:
+        path: "/home/brajcic/{{ folder_name }}"
