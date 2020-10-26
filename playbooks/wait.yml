@@ -8,6 +8,7 @@
     - name: Queue build of a project in Jenkins
       uri:
         url: "http://localhost:8080/job/ansible-job-second//build?token=11b4f83aec94f4f1cb599431434a77a364"
+        force_basic_auth: yes
         method: POST
         status_code: 201
 
