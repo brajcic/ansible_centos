@@ -11,4 +11,6 @@
         force_basic_auth: yes
         method: POST
         status_code: 201
+        headers:
+          Jenkins-Crumb: "9ef6b8b9513cee8e6a5696cee164d9f1c2f745c75471323d32395d3289890b6c3a235e5830cc7b35d9debd5a139bcc0556ae111be1a738696f01734c2c352dd4"
 
