@@ -5,6 +5,8 @@
 
   tasks:
     - name: create_folder
+      wait_for:
+        delay: 6
       file:
         path: "/home/brajcic/WaitFolder"
         state: directory
