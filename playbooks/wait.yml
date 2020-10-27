@@ -1,19 +1,23 @@
 ---
 
-- hosts: localhost
-  connection: local
+- hosts: server1
+  become: yes
 
 
   tasks:
-    - name: Queue build of a project in Jenkins
-      uri:
-        url: "http://localhost:8080/job/ansible-calls-jenkins//build?token=11b4f83aec94f4f1cb599431434a77a364"
-        force_basic_auth: yes
-        user: "brajcicansible"
-        password: "bojan123"
-        method: POST
-        status_code: 201
-        headers:
-          Jenkins-Crumb: "80630d71cd5d998e25c5f62ba576f16acf1c593fdab5733fc5f1b38b8422ae29"
 
 
+#    - name: Queue build of a project in Jenkins
+#      uri:
+#        url: "http://localhost:8080/job/ansible-calls-jenkins//build?token=11b4f83aec94f4f1cb599431434a77a364"
+#        force_basic_auth: yes
+#        user: "brajcicansible"
+#        password: "bojan123"
+#        method: POST
+#        status_code: 201
+#        headers:
+#          Jenkins-Crumb: "80630d71cd5d998e25c5f62ba576f16acf1c593fdab5733fc5f1b38b8422ae29"
+
+    - name: wait_for_a_folder_to_be_created
+      wait_for:
+        path: "/home/brajcic/WaitFolder"
