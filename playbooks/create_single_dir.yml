@@ -8,6 +8,7 @@
     - name: wait_delay
       wait_for:
         delay: 6
+      notify: create_folder
 
     - name: create_folder
       file:
