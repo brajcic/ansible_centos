@@ -4,9 +4,12 @@
   become: yes
 
   tasks:
-    - name: create_folder
+
+    - name: wait_delay
       wait_for:
         delay: 6
+
+    - name: create_folder
       file:
         path: "/home/brajcic/WaitFolder"
         state: directory
