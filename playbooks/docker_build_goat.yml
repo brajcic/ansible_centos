@@ -1,0 +1,23 @@
+---
+
+- hosts: localhost
+  connection: local
+
+
+  tasks:
+    - name: create_goat_image
+      docker_image:
+        build:
+          path: "/home/brajcicansible/Desktop/devops_web_goat/docker"
+          pull: yes
+        name: goat_image
+        state: present
+
+    - name: run_container
+      docker_container:
+        image: goat_image
+        name: web_goat_app
+        state: started
+        ports:
+          - "8888:8080"
+
